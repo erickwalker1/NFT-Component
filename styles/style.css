@@ -1,0 +1,156 @@
+:root {
+  --primary-text-color: hsl(215, 51%, 70%);
+  --secondary-text-color: white;
+  --tertiary-text-color: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-break: hsl(215, 32%, 27%);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3rem 0;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+}
+
+p {
+  color: var(--primary-text-color);
+  font-size: 1.125rem;
+}
+
+/* Main Card */
+
+.main {
+  margin: auto;
+  padding: 1.5rem;
+  display: flex;
+  max-width: 350px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.83);
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: var(--card-bg);
+
+  animation: float 6s ease-in-out infinite;
+}
+
+.main__image-container {
+  margin: 0.5rem 0;
+  border-radius: 15px;
+}
+
+.main__image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.main__heading {
+  color: var(--secondary-text-color);
+}
+
+.main__heading:hover {
+  color: var(--tertiary-text-color);
+  cursor: pointer;
+  transition: all 0.75s;
+}
+
+.main__heading,
+.main__text {
+  margin: 0.5rem;
+}
+
+/* Card Animation ~ The Floating Effect */
+
+@keyframes float {
+  0% {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.83);
+    transform: translateY(0px);
+  }
+
+  50% {
+    box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.83);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.83);
+    transform: translateY(0px);
+  }
+}
+
+/* NFT Price & Time Info */
+
+.eth-and-clock {
+  display: flex;
+}
+
+.info__eth-container {
+  display: flex;
+}
+
+.info__clock-container {
+  display: flex;
+  margin-left: 6rem;
+}
+
+.info__eth-container img,
+.info__clock-container img {
+  height: 1.5rem;
+  align-self: center;
+  margin-right: 5px;
+}
+
+.eth-text {
+  color: var(--tertiary-text-color);
+}
+
+/* Avatar Section */
+
+.creation-container {
+  display: flex;
+  margin-top: 1.25rem;
+}
+
+.creation-container img {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--secondary-text-color);
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.avatar-name {
+  color: var(--secondary-text-color);
+}
+
+.avatar-name:hover {
+  color: var(--tertiary-text-color);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+/* Line */
+
+.line-break {
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--line-break);
+}
+
+/* Attribution Footer */
+
+.attribution {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.attribution a:link,
+.attribution a:visited {
+  color: var(--tertiary-text-color);
+  text-decoration: none;
+}
